@@ -1,20 +1,20 @@
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import MessageForm from "@/components/message-form";
+import { getMessagesFromDatabase } from "@/actions/get-messages-from-database";
 
-export default function Home() {
+export const runtime = "edge";
+
+export default async function Home() {
+  const messages = getMessagesFromDatabase();
+
   return (
     <main className="max-w-2xl mx-auto p-10">
-      <div className="flex flex-col justify-center gap-10">
-        <Input placeholder="Type your task..." />
-        <Button>Submit</Button>
-      </div>
+      <MessageForm />
 
       <div className="p-10">
         <ul>
-          <li>dsfs</li>
-          <li>kajjads</li>
-          <li>mwkds</li>
+          {(await messages).map((message) => (
+            <li key={message.id}>{message.message}</li>
+          ))}
         </ul>
       </div>
     </main>
