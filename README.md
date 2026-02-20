@@ -1,3 +1,9 @@
+# YouTube
+ Next Js 14 Mini Course | Build and Deploy Fullstack Application on Cloudflare with Turso Database 
+https://www.youtube.com/watch?v=Ouny4LKe3UM
+
+https://orm.drizzle.team/docs/tutorials/drizzle-with-turso
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
